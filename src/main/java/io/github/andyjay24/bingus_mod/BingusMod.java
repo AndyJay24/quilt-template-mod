@@ -3,6 +3,8 @@ package io.github.andyjay24.bingus_mod;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -17,7 +19,7 @@ public class BingusMod implements ModInitializer {
 	// It is considered best practice to use your mod name as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("Bingus Mod");
-	public static final Item L_SWORD = new Item(new QuiltItemSettings());
+	public static final ToolItem L_SWORD = new SwordItem(LToolMaterial.INSTANCE, 8, 1.4F, new QuiltItemSettings());
 
 	@Override
 	public void onInitialize(ModContainer mod) {
